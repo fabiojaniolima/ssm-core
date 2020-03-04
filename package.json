@@ -1,0 +1,19 @@
+{
+  "name": "ssm-core",
+  "version": "0.1.0",
+  "description": "Node.js wrapper for component management through Siebel Server Manager.",
+  "main": "index.js",
+  "author": {
+    "name": "Fábio J L Ferreira",
+    "email": "contato@fabiojanio.com",
+    "url": "http://fabiojanio.com"
+  },
+  "keywords": [
+    "siebel",
+    "wrapper",
+    "oracle",
+    "srvrmgr"
+  ],
+  "repository": "github:fabiojaniolima/ssm-core",
+  "license": "MIT"
+}
