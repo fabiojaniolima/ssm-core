@@ -8,9 +8,9 @@ const { exec } = require('child_process')
 const newProcess = command => {
   return new Promise((resolve, reject) => {
     exec(command, (_, stdout, stderr) => {
-      if (stderr) reject(stderr)
+      if (stderr) reject({ success: false, content: stderr })
 
-      resolve(stdout)
+      resolve({ success: true, content: stdout })
     })
   })
 }
