@@ -17,10 +17,9 @@ yarn
 
 > You are free to use NPM instead of YARN if you prefer.
 
-
 ## Examples
 
-Lista todos os componentes do ambiente:
+To list all server components:
 
 ```
 const app = require('./index')
@@ -33,7 +32,7 @@ async function main() {
       'enterprise',
       'username',
       'password',
-      { action: 'list component' }
+      { action: 'list component', server: 'xpto' }
     )
     console.log(result)
   } catch (err) {

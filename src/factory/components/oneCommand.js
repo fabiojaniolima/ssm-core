@@ -1,11 +1,7 @@
-const oneCommand = (server, action, components) => {
-  let command = ''
+const oneCommand = (server, action, component) => {
+  let command = `/s ${server} /b /c "${action} `
 
-  if (server) command += `/s ${server} `
-
-  command += `/b /c "${action} `
-
-  if (components.length) command += components[0]
+  if (component) command += `${component} `
 
   return command.trim() + '"'
 }

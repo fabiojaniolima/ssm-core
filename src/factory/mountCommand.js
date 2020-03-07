@@ -20,14 +20,15 @@ class MountCommand {
       commands
     )
 
-    if (!action) throw 'It is mandatory to inform the action to be performed.'
+    if (!(action && server))
+      throw 'It is mandatory to inform the action and the server.'
 
     if (components.length === 0 && !action.match(/^list/))
       throw 'For this type of action, it is necessary to inform a component name.'
 
     if (components.length === 0 || typeof components[0] === 'string') {
       if (components.length === 0 || components.length === 1) {
-        return this.command + oneCommand(server, action, components)
+        return this.command + oneCommand(server, action, components[0])
       }
     }
 
